@@ -1,4 +1,4 @@
-package com.cognizant.model;
+package com.cognizant.magicapi.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
