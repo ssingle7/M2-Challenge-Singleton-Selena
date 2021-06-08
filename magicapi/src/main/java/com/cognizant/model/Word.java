@@ -3,6 +3,7 @@ package com.cognizant.model;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
+import java.util.Objects;
 
 @Entity
 @JsonIgnoreProperties
@@ -15,4 +16,56 @@ public class Word {
     @Column(unique = true)
     private String word;
     private String definition;
+
+    public Word(Integer id, String word, String definition) {
+        this.id = id;
+        this.word = word;
+        this.definition = definition;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getWord() {
+        return word;
+    }
+
+    public void setWord(String word) {
+        this.word = word;
+    }
+
+    public String getDefinition() {
+        return definition;
+    }
+
+    public void setDefinition(String definition) {
+        this.definition = definition;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Word word1 = (Word) o;
+        return Objects.equals(id, word1.id) && Objects.equals(word, word1.word) && Objects.equals(definition, word1.definition);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, word, definition);
+    }
+
+    @Override
+    public String toString() {
+        return "Word{" +
+                "id=" + id +
+                ", word='" + word + '\'' +
+                ", definition='" + definition + '\'' +
+                '}';
+    }
 }
