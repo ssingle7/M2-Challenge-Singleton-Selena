@@ -23,9 +23,9 @@ public class Magic8ballController {
             "Yes",
             "No",
             "Maybe",
-            "IDK",
-            "You've got to be kidding me!",
-            "Absolutely!"
+            "I'm not sure. Ask again tomorrow",
+            "I think you already know the answer to that",
+            "Don't second guess yourself"
     ));
 
     @RequestMapping(value = "/magic8", method = RequestMethod.POST)
@@ -39,31 +39,4 @@ public class Magic8ballController {
 
         return answerToQuestion;
     }
-
-
-//    //for example
-//    public static void main(String[] args) {
-//
-//
-//
-//        List<ChocoalteFactory> studentsAtOfficeHours = new ArrayList<>(
-//                Arrays.asList(
-//                        new ChocolateFactory("Wonka", 1922, "Wonka Bar"),
-//                        new ChocolateFactory("Hershey", 1903, "Hershey Bar"),
-//                        "Ashlyn",
-//                        "Selena",
-//                        "Dennis",
-//                        "Janella"
-//                )
-//        );
-//
-//        for (int i = 0; i < 100; i++) {
-////        int randonNum =ran.nextInt(1000)+1;
-//            int randomStudentIndex = rand.nextInt(studentsAtOfficeHours.size());
-//            ChocoalteFactory(instead of a String) student = studentsAtOfficeHours.get(randomStudentIndex);
-//
-////        String student = studentsAtOfficeHours.get(randomNumber % studentsAtOfficeHours.size());
-//            System.out.println("Here's a random student!" + student);
-//        }
-//    }
 }
